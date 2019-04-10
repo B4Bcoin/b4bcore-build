@@ -17,8 +17,8 @@
  * </ul>`
  * <li> `browser` - generate files needed for browser (browserify)
  * <ul>
- * <li> `browser:uncompressed` - build uncomprssed browser bundle (`ravencore-*.js`)
- * <li> `browser:compressed` - build compressed browser bundle (`ravencore-*.min.js`)
+ * <li> `browser:uncompressed` - build uncomprssed browser bundle (`b4bcore-*.js`)
+ * <li> `browser:compressed` - build compressed browser bundle (`b4bcore-*.min.js`)
  * <li> `browser:maketests` - build `tests.js`, needed for testing without karma
  * </ul>`
  * <li> `lint` - run `jshint`
@@ -54,12 +54,12 @@ function startGulp(name, opts) {
 
   opts = opts || {};
   var browser = !opts.skipBrowser;
-  var fullname = name ? 'ravencore-' + name : 'ravencore';
+  var fullname = name ? 'b4bcore-' + name : 'b4bcore';
   var files = ['lib/**/*.js'];
   var tests = ['test/**/*.js'];
   var alljs = files.concat(tests);
 
-  var buildPath = './node_modules/ravencore-build/';
+  var buildPath = './node_modules/b4bcore-build/';
   var buildModulesPath = buildPath + 'node_modules/';
   var buildBinPath = buildPath + 'node_modules/.bin/';
 
@@ -129,9 +129,9 @@ function startGulp(name, opts) {
     var browserifyCommand;
 
     if (name !== 'lib') {
-      browserifyCommand = browserifyPath + ' --require ./index.js:' + fullname + ' --external ravencore-lib -o ' + fullname + '.js';
+      browserifyCommand = browserifyPath + ' --require ./index.js:' + fullname + ' --external b4bcore-lib -o ' + fullname + '.js';
     } else {
-      browserifyCommand = browserifyPath + ' --require ./index.js:ravencore-lib -o ravencore-lib.js';
+      browserifyCommand = browserifyPath + ' --require ./index.js:b4bcore-lib -o b4bcore-lib.js';
     }
 
     gulp.task('browser:uncompressed', shell.task([

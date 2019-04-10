@@ -1,17 +1,17 @@
 {
-  "name": "ravencore-build",
+  "name": "b4bcore-build",
   "version": "1.0.3",
-  "description": "A helper for common tasks to build ravencore modules'",
+  "description": "A helper for common tasks to build b4bcore modules'",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/RavenDevKit/ravencore-build"
+    "url": "git://github.com/B4Bcoin/b4bcore-build"
   },
   "keywords": [
-    "ravencore"
+    "b4bcore"
   ],
   "contributors": [
     {
@@ -21,9 +21,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RavenDevKit/ravencore-build/issues"
+    "url": "https://github.com/B4Bcoin/b4bcore-build/issues"
   },
-  "homepage": "https://github.com/RavenDevKit/ravencore-build",
+  "homepage": "https://github.com/B4Bcoin/b4bcore-build",
   "dependencies": {
     "brfs": "^1.4.3",
     "browserify": "^13.1.1",
